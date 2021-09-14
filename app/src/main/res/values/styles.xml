@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="todaytext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="indextext">
+        <item name="android:layout_width">0dp</item>
+       <!-- <item name="android:layout_height">wrap_content</item>-->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">5dp</item>
+
+        <!---->
+        <item name="android:textColor">@color/main_background</item>
+
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--兵-->
+    <style name="core_SettingTextStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/common_dimen_mid</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/setting_text_height</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:textColor">@color/main_text_black</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+</resources>

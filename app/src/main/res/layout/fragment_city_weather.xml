@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/out_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/frag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/bing_pic_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/frag_tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="南昌"
+                android:textColor="@color/main_background"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/frag_tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="2019-11-05"
+                android:textColor="@color/main_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/frag_tv_currenttemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+                    android:text="29°"
+                    android:textColor="@color/main_background"
+                    android:textSize="80sp" />
+
+                <TextView
+                    android:id="@+id/frag_tv_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="多云"
+                    android:textColor="@color/main_background"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/frag_tv_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:drawableLeft="@mipmap/icon_wind"
+                    android:drawablePadding="2dp"
+                    android:text="西南风 2级"
+                    android:textColor="@color/main_background"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/frag_tv_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:drawableLeft="@mipmap/icon_humidity"
+                    android:drawablePadding="2dp"
+                    android:text="湿度 75%"
+                    android:textColor="@color/main_background"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/frag_tv_temprange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_pressure"
+                    android:drawablePadding="2dp"
+                    android:text="气压 1002hPa"
+                    android:textColor="@color/main_background"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/frag_tv_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="天暗下来，你就是阳光~"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!--兵哥 24小时预报-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frag_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="24小时预报"
+                android:textColor="@color/main_background"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/main_background" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <!-- 兵哥用于显示未来七天的天气情况-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frag_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="未来三天"
+                android:textColor="@color/main_background"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/main_background" />
+            <!--显示七天的线性布局-->
+            <LinearLayout
+                android:id="@+id/frag_center_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 用于表示指数信息的线性布局-->
+        <LinearLayout
+            android:id="@+id/frag_index_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frag_bg"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/indextext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="生活指数" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/main_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/frag_index_tv_dress"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/icon_cloth1"
+                    android:text="穿衣 炎热" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_washcar"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/xicar"
+                    android:text="洗车 不宜" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_cold"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/cold"
+                    android:text="感冒 易发" />
+            </LinearLayout>
+
+            <!--<ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#2E8B57" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/frag_index_tv_sport"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/sports"
+                    android:text="运动 较不宜" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_rays"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/light1"
+                    android:text="紫外线 强" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_umbrella"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/icon_yusan"
+                    android:text="雨伞 不带伞" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/frag_index_tv_fish"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/ico_fish"
+                    android:text="钓鱼 较不宜" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_traffic"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/icon_traffic"
+                    android:text="交通 较不宜" />
+
+                <TextView
+                    android:id="@+id/frag_index_tv_tourism"
+                    style="@style/indextext"
+                    android:drawableTop="@mipmap/icon_tourism"
+                    android:text="旅游 较不宜" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

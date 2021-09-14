@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoreActivity">
+
+    <RelativeLayout
+        android:id="@+id/more_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#F5F5F5">
+
+        <ImageView
+            android:id="@+id/more_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:id="@+id/more_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="更多设置"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/more_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/more_top_layout"
+        android:background="#dcdcdc" />
+
+    <TextView
+        android:id="@+id/more_tv_exchangebg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/more_line1"
+        android:drawableLeft="@mipmap/more_bg"
+        android:drawablePadding="19dp"
+        android:padding="10dp"
+        android:text="改变壁纸"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/more_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/more_tv_exchangebg"
+        android:background="#DCDCDC" />
+
+    <RadioGroup
+        android:id="@+id/more_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/more_line2"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/more_rb_green"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#C5EDD1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="风景"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/more_rb_pink"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#FCAFAE"
+            android:button="@null"
+            android:gravity="center"
+            android:text="美女"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/more_rb_blue"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#87CEEB"
+            android:button="@null"
+            android:gravity="center"
+            android:text="动漫"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/more_tv_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/more_rg"
+        android:drawableLeft="@mipmap/more_cache"
+        android:drawablePadding="20dp"
+        android:padding="10dp"
+        android:text="清除缓存"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/more_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/more_tv_cache"
+        android:background="#DCDCDC" />
+
+    <TextView
+        android:id="@+id/more_tv_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/more_line4"
+        android:drawableLeft="@mipmap/more_share"
+        android:drawablePadding="20dp"
+        android:padding="10dp"
+        android:text="分享软件"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/more_line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/more_tv_share"
+        android:background="#DCDCDC" />
+
+    <TextView
+        android:id="@+id/more_tv_icon_yiyan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/more_line5"
+        android:drawableLeft="@mipmap/icon_yiyan"
+        android:drawablePadding="20dp"
+        android:padding="10dp"
+        android:text="随机一言"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/more_line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/more_tv_icon_yiyan"
+        android:background="#DCDCDC" />
+
+    <TextView
+        android:id="@+id/more_tv_icon_fank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/more_line6"
+        android:drawableLeft="@mipmap/icon_fank"
+        android:drawablePadding="20dp"
+        android:padding="10dp"
+        android:text="问题反馈"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/more_tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/common_dimen_huge"
+        android:layout_marginBottom="@dimen/common_dimen_huge"
+        android:gravity="bottom"
+        android:text="南师天气 V2.0"
+        android:textColor="@color/main_text_black" />
+</RelativeLayout>

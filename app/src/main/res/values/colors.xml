@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="main_background">#FFFFFF</color>
+    <color name="dark_background">#f5f5f5</color>
+    <!--material design guide color -->
+    <color name="dividers_black">#1C000000</color>
+    <color name="main_text_black">#DE000000</color>
+
+    <color name="transparent_bg_2">#44000000</color><!--黑色半透明 二-->
+</resources>
